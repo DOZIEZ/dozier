@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title></title>
+            <meta charset="utf-8"/>
+            <link rel="stylesheet"href="style.css"/>
+        </head>
+        <body>
+            <div class="container">
+                <h1>DOZIER LUDO</h1>
+               
+                
+                <div class="image">
+                  <p><em></em></p>
+                    <img src="image/image1.png" Id="check1">
+                </div>
+                 <div class="image">
+                 <p><em></em></p>
+                    <img src="image/image1.png"Id="check2" >
+                 
+                 </div>
+                 
+                        
+      <div>
+        <button onclick ="ludo1()"> Tourner </button>
+      </div> 
+</div>
+ <script>
+    
+ludo1 = () => {
+    const play1 = Math.floor(Math.random() *6) + 1;
+    const play1image = "image/image"+play1+".png";
+    document.getElementById('check1').setAttribute('src' , play1image);
+     
+    const play2 = Math.floor(Math.random() *6) + 1;
+    const play2image = "image/image"+play2+".png";
+    document.getElementById('check2').setAttribute('src' , play2image);
+     
+
+}
+ </script>
+   <form method="post" action="traitement.php"/>
+   <p>
+   <input type="radio" name="Pour" value="Moins de 7" id="Pour"/>
+   <label for="Moins de 7"> Moins de 7</label>
+   
+    <input type="radio" name="Pour" value="Exactement 7" id="Pour"/>
+   <label for="Exactement 7"> Exactement 7</label>
+   
+    <input type="radio" name="Pour" value="Pus de 7" id="Pour"/>
+   <label for="Plus de 7"> Plus de 7</label>
+         </p>
+            </form>
+
+
+
+  
+</body>
+</html>
